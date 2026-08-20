@@ -1,0 +1,20 @@
+.kelly-page {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.kelly-title {
+    color: #71e6c6;
+    font-size: 72px;
+    line-height: 1;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .kelly-title {
+        font-size: 48px;
+    }
+}
