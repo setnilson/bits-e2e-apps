@@ -8,7 +8,7 @@ const hasDatadogApiKeys = Boolean(
     (process.env.DD_API_KEY || process.env.DATADOG_API_KEY) &&
         (process.env.DD_APP_KEY || process.env.DATADOG_APP_KEY),
 );
-const datadogSite = process.env.DATADOG_SITE || process.env.DD_SITE || 'datadoghq.com';
+const datadogSite = process.env.DATADOG_SITE || process.env.DD_SITE || 'datad0g.com';
 
 process.env.DATADOG_SITE ||= datadogSite;
 process.env.DD_SITE ||= datadogSite;
