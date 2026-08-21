@@ -1,0 +1,20 @@
+.chau-page {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.chau-title {
+    color: #f97316;
+    font-size: 72px;
+    line-height: 1;
+    margin: 0;
+}
+
+@media (max-width: 480px) {
+    .chau-title {
+        font-size: 48px;
+    }
+}
