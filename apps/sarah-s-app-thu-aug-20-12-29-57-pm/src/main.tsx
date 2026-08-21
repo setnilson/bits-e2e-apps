@@ -1,6 +1,3 @@
-import '@datadog/druids/styles.css';
-
-import { DruidsEnvironment } from '@datadog/druids/layout/DruidsEnvironment';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
@@ -13,9 +10,7 @@ if (appRoot) {
     createRoot(appRoot).render(
         <StrictMode>
             <QueryClientProvider client={queryClient}>
-                <DruidsEnvironment backgroundColor="standard">
-                    <App />
-                </DruidsEnvironment>
+                <App />
             </QueryClientProvider>
         </StrictMode>,
     );
