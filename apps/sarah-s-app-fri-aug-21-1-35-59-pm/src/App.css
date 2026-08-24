@@ -1,0 +1,78 @@
+.oliver-page {
+    align-items: center;
+    background:
+        linear-gradient(135deg, rgba(16, 89, 67, 0.12), transparent 32%),
+        linear-gradient(225deg, rgba(232, 181, 82, 0.18), transparent 36%),
+        #fbfcf7;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.oliver-page::before,
+.oliver-page::after {
+    background: #105943;
+    content: "";
+    height: 2px;
+    opacity: 0.2;
+    position: absolute;
+    transform: rotate(-12deg);
+    width: min(34vw, 360px);
+}
+
+.oliver-page::before {
+    left: -48px;
+    top: 22%;
+}
+
+.oliver-page::after {
+    bottom: 18%;
+    right: -60px;
+}
+
+.oliver-stage {
+    position: relative;
+}
+
+.oliver-kicker {
+    color: #6b5a2d;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    line-height: 1.3;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.oliver-title {
+    color: #105943;
+    font-size: clamp(72px, 17vw, 190px);
+    line-height: 0.85;
+    margin: 0;
+    text-shadow:
+        0 2px 0 #d9b75c,
+        0 12px 28px rgba(16, 89, 67, 0.2);
+}
+
+.oliver-rule {
+    background: linear-gradient(90deg, transparent, #d9b75c, #105943, #d9b75c, transparent);
+    height: 4px;
+    margin: 26px auto 0;
+    max-width: 460px;
+    width: 72%;
+}
+
+@media (max-width: 560px) {
+    .oliver-kicker {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+    }
+
+    .oliver-rule {
+        margin-top: 18px;
+        width: 84%;
+    }
+}
