@@ -16,6 +16,13 @@ export default defineConfig({
     build: {
         sourcemap: true,
     },
+    // Force a single React copy so @datadog/druids and @tanstack/react-query
+    // don't each bundle their own — duplicate React causes an invalid hook
+    // call ("Cannot read properties of null (reading 'useEffect')") and a
+    // blank render.
+    resolve: {
+        dedupe: ['react', 'react-dom'],
+    },
     plugins: [
         react(),
         datadogVitePlugin({
