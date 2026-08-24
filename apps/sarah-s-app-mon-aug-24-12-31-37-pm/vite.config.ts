@@ -54,3 +54,5 @@ export default defineConfig({
         }),
     ],
 });
+
+// redeploy: reconcile lockfile + staging site
