@@ -1,0 +1,85 @@
+.oliver-stage {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background:
+        linear-gradient(135deg, rgba(11, 31, 24, 0.06) 25%, transparent 25%) 0 0 / 28px 28px,
+        linear-gradient(225deg, rgba(19, 92, 62, 0.08) 25%, transparent 25%) 0 0 / 28px 28px,
+        linear-gradient(145deg, #f5fbf5 0%, #e5f0e2 48%, #fff9ed 100%);
+    color: #123426;
+}
+
+.oliver-stage::before {
+    content: "";
+    position: absolute;
+    inset: 9%;
+    border: 1px solid rgba(34, 76, 50, 0.24);
+    transform: rotate(-2deg);
+}
+
+.oliver-stage::after {
+    content: "";
+    position: absolute;
+    inset: auto 12% 11% 12%;
+    height: 12px;
+    background: repeating-linear-gradient(
+        90deg,
+        #14532d 0 56px,
+        #d4a44c 56px 68px,
+        #6b8f71 68px 108px
+    );
+    border-radius: 999px;
+    box-shadow: 0 14px 32px rgba(20, 83, 45, 0.2);
+}
+
+.oliver-panel {
+    position: relative;
+    z-index: 1;
+    width: min(760px, calc(100vw - 48px));
+    text-align: center;
+}
+
+.oliver-kicker {
+    margin: 0 0 12px;
+    color: #7c5a15;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.oliver-title {
+    margin: 0;
+    color: #14532d;
+    font-size: 168px;
+    line-height: 0.86;
+    letter-spacing: 0;
+    text-shadow:
+        0 2px 0 #ffffff,
+        0 18px 42px rgba(20, 83, 45, 0.24);
+}
+
+.oliver-caption {
+    max-width: 480px;
+    margin: 26px auto 0;
+    color: #2d4b38;
+}
+
+@media (max-width: 520px) {
+    .oliver-panel {
+        width: min(100%, calc(100vw - 32px));
+    }
+
+    .oliver-stage::before {
+        inset: 18px;
+    }
+
+    .oliver-stage::after {
+        inset-inline: 28px;
+        bottom: 32px;
+    }
+
+    .oliver-title {
+        font-size: 82px;
+    }
+}
